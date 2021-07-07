@@ -1,0 +1,34 @@
+javascriptでよく使う関数
+
+## 文字列 String
+
+string.length 長さ
+string.index() 検索(位置)
+string.slice() 取り出し
+string.substring() ○文字目から○文字だけ取り出す
+string.split() 分割
+string.concat() 連結
+string.trim() 両端から空白を取り除く
+string.starsWith() 指定文字列で始まるか
+string.includes() 検索(含まれているか)
+string.toLowerCase() 小文字に変換
+string.replace() 置き換え
+
+##正規表現を使えるメソッド(抜粋)
+string.replace()
+string.match()
+string.search()
+string.split()
+
+よく使う正規表現
+[A-Z] A~Zの間の1文字
+\ 次の文字をエスケープ
+^ 行の先頭にマッチ
+$ 行の末尾にマッチ
+* 直前文字0回以上の繰り返しにマッチ
++ 直前文字1回以上の繰り返しにマッチ
+? 直前文字0回か1回の出現にマッチ
+{n} 直前の文字をn回一致
+\w 文字に一致
+\d 数字に一致
+\s 空白文字に一致
