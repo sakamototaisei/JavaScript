@@ -18,11 +18,37 @@
 <body>
 
 
-  
+  <div id="test"></div>
+  <!-- <button id="target" onclick="change_color()">押してね</button> -->
+  <button id="target">押してね</button>
 
 
 
 <script>
+
+  // 1つめ　HTMLタグにonckickと設定する
+  // function change_color(){
+  //   const test = document.getElementById('test');
+  //   test.textContent = 'テスト';
+  //   test.classList.add('red');
+  // }
+
+  // 2つめ　JSで設定　Element.onclick
+  // document.getElementById('target').onclick = function(){
+  //   const test = document.getElementById('test');
+  //   test.textContent = 'テスト';
+  //   test.classList.add('red');
+  // }
+
+  // 3つめ　イベントリスナー これが一番好ましい
+  const target = document.getElementById('target');
+
+  target.addEventListener('click', () => {
+    const test = document.getElementById('test');
+    test.textContent = 'テスト';
+    test.classList.add('red');
+  });
+
 </script>
 </body>
 </html>
