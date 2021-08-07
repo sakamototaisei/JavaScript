@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/app.css">
+  <style>
+    .red{
+      color:red;
+    }
+    .blue{
+      color:blue;
+    }
+  </style>
+</head>
+<body>
+
+<div id="test">
+  <ul>
+    <li class="test_list blue">テスト1</li>
+    <li class="test_list">テスト2</li>
+    <li class="test_list">テスト3</li>
+  </ul>
+</div>
+
+<script>
+  //const test = document.getElementById('test');
+  document.getElementById('test').classList.add('red');  
+  //test.classList.add('red');
+  // 返り値 Element.classList.toggle
+
+  // const testList = document.querySelector('.test_list');
+  // testList.classList.remove('blue');  
+  // // 返り値 Element
+
+
+  // const testLists = document.querySelectorAll('.test_list');
+  // console.log(test);
+  // console.log(testList);
+  // console.log(testLists);
+
+</script>
+</body>
+</html>

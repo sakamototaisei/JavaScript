@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/app.css">
+  <style>
+    .red{
+      color:red;
+    }
+    .blue{
+      color:blue;
+    }
+  </style>
+</head>
+<body>
+
+<input id="test" >あああ</input>
+<!-- 属性 attribute -->
+
+<script>
+  const input = document.getElementById('test');
+  //Element
+  input.type = 'text';
+  input.placeholder = 'あああ';
+  input.name = 'test';
+  input.textContent = 'テストです';
+//  input.setAttribute('type','text');
+
+  console.log(input);
+
+  const anchor = document.createElement('a');
+  anchor.href = 'https://google.com';
+  anchor.target = '_brank';
+  anchor.aaa = 'いいい';
+
+  console.log(anchor);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/app.css">
+  <style>
+    .red{
+      color:red;
+    }
+    .blue{
+      color:blue;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="grand-father">
+    <div id="parent">
+      <div id="target">
+        自分
+      </div>
+    </div>
+    <div id="divList">
+      <div class="div1">テスト1</div>
+      <div class="div2">テスト2</div>
+      <div class="div3">テスト3</div>
+    </div>
+  </div>
+  <script>
+    const target = document.getElementById('target');
+    const newDiv = document.createElement('div');
+    newDiv.id = 'test';
+    newDiv.classList.add('red');
+    newDiv.textContent = 'テスト';
+   // target.appendChild(newDiv);
+    target.parentNode.appendChild(newDiv);
+
+  const targetList= document.getElementById('divList').firstElementChild;
+  const reference = document.querySelector('.div1').ElementSibling;
+
+console.log(targetList);
+
+  const newElement = document.createElement('div');
+
+  newElement.classList.add('div4');
+  newElement.textContent = '追加分';
+  targetList.insertBefore(newElement, reference);
+
+</script>
+</body>
+</html>

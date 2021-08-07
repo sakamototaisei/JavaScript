@@ -43,7 +43,8 @@
   // 3つめ　イベントリスナー これが一番好ましい
   const target = document.getElementById('target');
 
-  target.addEventListener('click', () => {
+  target.addEventListener('click', (e) => {
+    console.log(e);
     const test = document.getElementById('test');
     test.textContent = 'テスト';
     test.classList.add('red');

@@ -1,0 +1,66 @@
+
+.carousel{
+  width: 840px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  &__main{
+    width: 640px;
+    height: 400px;
+    margin:0 auto;
+    & > .active{
+      animation: fadeImg 0.8s;
+    }
+  }
+  &__prev{
+    position: absolute;
+    top: 150px;
+    left:20px;
+    cursor: pointer;
+    color: lightgray;
+    &:hover{
+      transition-duration: .2s;
+      transform: translateX(-10px);
+    }
+  }
+  &__next{
+    position: absolute;
+    top: 150px;
+    right:20px;
+    cursor: pointer;
+    color:lightgray;
+    &:hover{
+      transition-duration: .2s;
+      transform: translateX(10px);
+    }
+  }
+  &__thumbnails{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    & li{
+      cursor: pointer;
+      opacity: 0.4;
+      &:hover{
+        opacity: 1;
+      }
+      &.current{
+        opacity: 1;
+      }
+    }
+    & img{
+      width: 80px;
+    }
+  }
+}
+
+
+@keyframes fadeImg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

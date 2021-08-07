@@ -1,0 +1,94 @@
+.carousel {
+  width: 840px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel__main {
+  width: 640px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.carousel__main > .active {
+  -webkit-animation: fadeImg 0.8s;
+          animation: fadeImg 0.8s;
+}
+
+.carousel__prev {
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  cursor: pointer;
+  color: lightgray;
+}
+
+.carousel__prev:hover {
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.carousel__next {
+  position: absolute;
+  top: 150px;
+  right: 20px;
+  cursor: pointer;
+  color: lightgray;
+}
+
+.carousel__next:hover {
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.carousel__thumbnails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.carousel__thumbnails li {
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.carousel__thumbnails li:hover {
+  opacity: 1;
+}
+
+.carousel__thumbnails li.current {
+  opacity: 1;
+}
+
+.carousel__thumbnails img {
+  width: 80px;
+}
+
+@-webkit-keyframes fadeImg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeImg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,47 @@
+.tab {
+  font-size: 14px;
+  margin: 20px auto;
+  width: 600px;
+}
+
+.tab__label {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tab__label li a {
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+  padding: 8px 0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.tab__label li a.active {
+  background: #E6F0FF;
+}
+
+.tab__label li a:not(.active):hover {
+  opacity: 0.5;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.tab__content {
+  display: none;
+}
+
+.tab__content.active {
+  background: #E6F0FF;
+  font-size: 16px;
+  min-height: 150px;
+  padding: 15px;
+  display: block;
+}
+/*# sourceMappingURL=app.css.map */

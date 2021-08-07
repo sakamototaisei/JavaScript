@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IO</title>
+  <style>
+    .h300{
+        height:300px;
+        
+    }
+    
+    .blue{
+        background-color: skyblue;
+    }
+    
+    .pink{
+        background-color: salmon;
+    }
+    
+    .relative{
+      position: relative;
+    }
+    
+    .message-box{
+      position:absolute;
+      top:100px;
+      left:300px;
+      display: inline-block;
+      margin:0 auto;
+      width:100px;
+      height:100px;
+      background-color: white;
+      opacity:0;
+    }
+    
+    .show{
+      opacity: 1;
+      transition: opacity 0.5s ease-in;
+    }
+    </style>
+    
+</head>
+<body>
+
+  <div class="h300 blue"></div>
+  <div class="h300 pink"></div>
+  <div class="h300 blue relative">
+    <div class="message-box">あああ</div>
+  </div>
+  <div class="h300 pink"></div>
+  <div class="h300 blue relative">
+    <div class="message-box">いいい</div>
+  </div>
+  <div class="h300 pink"></div>
+
+  <script>
+    //window.addEventListener('scroll')
+    
+    const options = {
+      threshold:0.5,
+      rootMargin:'-200px'
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    const targets = document.querySelectorAll('.message-box');
+
+    targets.forEach(target => observer.observe(target));
+
+    function callback(entries){
+      entries.forEach( entry =>{
+        console.log(entry);
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }
+
+  </script>
+  
+</body>
+</html>

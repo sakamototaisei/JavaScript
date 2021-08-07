@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/app.css">
+  <style>
+    .red{
+      color:red;
+    }
+    .blue{
+      color:blue;
+    }
+  </style>
+</head>
+<body>
+
+<div id="test"></div>
+<!-- <button id="target" onclick="change_color()">押してね</button> -->
+<div id="target">押してね</div>
+<script>
+
+// 1つめ HTMLタグにonlickと設定する
+// function change_color(){
+//   const test = document.getElementById('test');
+//   test.textContent = 'テスト';
+//   test.classList.add('red');
+// }
+
+// 2つめ JSで設定 Element.onclick
+// document.getElementById('target').onclick = function(){
+//   const test = document.getElementById('test');
+//   test.textContent = 'テスト';
+//   test.classList.add('red');
+// }
+
+// 3つめ イベントリスナー
+const target = document.getElementById('target');
+
+target.addEventListener('click', (e) => {
+  console.log(e);
+  const test = document.getElementById('test');
+  test.textContent = 'テスト';
+  test.classList.add('red');
+
+});
+
+
+</script>
+</body>
+</html>
